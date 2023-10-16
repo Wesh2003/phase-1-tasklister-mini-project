@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   } 
 
-  function newTask(){
+function addingEvent(){
+  document.querySelector('#subm').addEventListener('click', listing)
+  function listing(){
     let li = document.createElement('li');
     li.innerText =  document.getElementById("new-task-description").value;
     document.getElementById("tasks").appendChild(li);
@@ -26,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   }
+}
+addingEvent();
 
 
 });
